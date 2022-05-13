@@ -4,3 +4,4 @@
 	* maxChar("abccccccd") => "c"
 	* maxChar("apple 12311111") => "1"
 	*/
+
