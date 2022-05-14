@@ -30,3 +30,19 @@ function populateArray() {
 populateArray();
 
 // INIZIA A SCRIVERE DA QUI
+function checkIfNumberIsInArray(array, target) {
+
+	console.log(array);
+
+	const position = array.indexOf(target);
+
+	console.log(position);
+
+	if (position !== -1) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+checkIfNumberIsInArray(arrayOfNumber, 69);

@@ -32,8 +32,10 @@ function isPalindrome(word) {
 	}
 	if (isPalindrome) {
 		console.log(`${word} è un palindromo!`);
+		return true;
 	} else {
 		console.log(`${word} non è un palindromo!`);
+		return false;
 	}
 }
 

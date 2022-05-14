@@ -7,8 +7,6 @@
 	*/
 
 
-
-
 function isAnagram(x, y) {
 
 	let firstWord = x.split("").sort().join("");
@@ -17,10 +15,13 @@ function isAnagram(x, y) {
 	if (firstWord === secondWord) {
 		console.log(`${x} e ${y} sono anagrammi!`)
 
+		return true;
+
 	} else {
 		console.log(`${x} e ${y} non sono anagrammi!`)
+		return false;
 	}
 
 }
 
-isAnagram("gnegne", "spero");
+isAnagram("iceman", "huehue");
