@@ -6,3 +6,18 @@
 	* reverseInt(-90) => -9
 	* reverseInt(-15) => -51
 	*/
+
+
+function reverseInt(integer) {
+	let intString = integer.toString();
+	let array = intString.split("");
+
+	console.log(intString, array);
+	let arrayInvert = array.reverse();
+
+.reverse
+		.join
+
+}
+
+reverseInt(-30);
