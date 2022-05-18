@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.griglia {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.cella {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.cella:first-child,
+.cella:nth-child(2),
+.cella:nth-child(3) {
+    border-top: none;
+}
+
+.cella:first-child,
+.cella:nth-child(4),
+.cella:nth-child(7) {
+    border-left: none;
+}
+
+.cella:nth-child(3),
+.cella:nth-child(6),
+.cella:nth-child(9) {
+    border-right: none;
+}
+
+.cella:nth-child(7),
+.cella:nth-child(8),
+.cella:nth-child(9) {
+    border-bottom: none;
+}
