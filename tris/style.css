@@ -8,6 +8,7 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .griglia {
@@ -19,6 +20,54 @@ body {
     justify-items: center;
     align-content: center;
     justify-content: center;
+    position: relative;
+}
+
+.contenitore-button {
+    position: absolute;
+    top: 74%;
+    left: 42.5%;
+    text-align: left;
+}
+
+button {
+    position: absolute;
+    top: 69%;
+    right: 50%;
+    border: none;
+    padding: 15px 7px;
+    border-radius: 5px;
+    font-weight: 800;
+    background-color: rgb(255, 205, 40);
+    cursor: pointer;
+}
+
+.turno {
+    position: absolute;
+    top: 30%;
+    right: 50%;
+
+}
+
+.vincitore {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.vincitore .testo {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.vincitore.mostra {
+    display: flex;
 }
 
 .cella {
@@ -29,15 +78,19 @@ body {
     border-collapse: collapse;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
+
+
 
 .cella.x::after,
 .cella.x::before {
     position: absolute;
     content: '';
     width: 90px;
-    height: 5px;
+    height: 8px;
     background-color: black;
 }
 
@@ -47,6 +100,25 @@ body {
 
 .cella.x::after {
     transform: rotate(-45deg);
+}
+
+.cella.cerchio::after,
+.cella.cerchio::before {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+}
+
+.cella.cerchio::before {
+    height: 80px;
+    width: 80px;
+    background-color: black;
+}
+
+.cella.cerchio::after {
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
 }
 
 .cella:first-child,
