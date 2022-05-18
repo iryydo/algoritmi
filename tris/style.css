@@ -22,10 +22,31 @@ body {
 }
 
 .cella {
+    position: relative;
     height: 100px;
     width: 100px;
     border: 2px solid black;
     border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cella.x::after,
+.cella.x::before {
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 5px;
+    background-color: black;
+}
+
+.cella.x::before {
+    transform: rotate(45deg);
+}
+
+.cella.x::after {
+    transform: rotate(-45deg);
 }
 
 .cella:first-child,
